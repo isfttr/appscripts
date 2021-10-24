@@ -54,7 +54,7 @@ function criarPDF() {
   const pastaTemporaria = DriveApp.getFolderById("");
   const modeloDocumento = DriveApp.getFileById("");
 
-  const novoArquivoTemporario = modeloDocumento.makeCopy(pastaTemporaria).setName(placa + "-" + servico + "-" + datahoraResposta + "-arquivo-temporario");
+  const novoArquivoTemporario = modeloDocumento.makeCopy(pastaTemporaria).setName(formatoNome + "-arquivo-temporario");
   const arquivoTemporario = DocumentApp.openById(novoArquivoTemporario.getId());
   
   console.log("Arquivo Temporário aberto");
